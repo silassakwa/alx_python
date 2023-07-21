@@ -1,17 +1,13 @@
-# 3-last_digit.py
+#!/usr/bin/python3
 import random
-
-# Generate a random signed number between -10000 and 10000 (inclusive)
 number = random.randint(-10000, 10000)
+last_digit = number % 10
 
-# Get the last digit of the number
-last_digit = abs(number) % 10
+print("Last digit of {} is {} and is".format(number, last_digit), end=" \n")
 
-# Check the value of the last digit and print the result
-print(f"The string Last digit of {number} is {last_digit}", end=" ")
 if last_digit > 5:
-    print("and is greater than 5")
+    print("greater than 5",end="\n")
 elif last_digit == 0:
-    print("and is 0")
+    print("0",end="\n")
 else:
-    print("and is less than 6 and not 0")
+    print("less than 6 and not 0",end="\n")
