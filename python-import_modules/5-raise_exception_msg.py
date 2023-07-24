@@ -1,7 +1,10 @@
+# File: 5-raise_exception_msg.py
+
 def raise_exception_msg(message=""):
-    raise NameError(message)
-
-
+    # Breaking the long line into multiple lines
+    raise NameError(
+        message
+    )
 #!/usr/bin/python3
 
 if __name__ == "__main__":
