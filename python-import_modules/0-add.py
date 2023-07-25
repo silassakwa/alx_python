@@ -8,4 +8,4 @@ b = 2
 # Printing the result using string formatting
 print("{} + {} = {}".format(a, b, add(a, b)))
 if __name__ == "__main__":
-    
+    pass
