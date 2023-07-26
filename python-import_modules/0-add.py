@@ -1,11 +1,24 @@
-#import tha add_0 module 
-from add_0 import add
-#declare the two given variable
-def main():
-    a = 1
-    b = 2
+#!/usr/bin/python3
+def add(a, b):
+    """My addition function
 
-    # Print the result using string formatting
-    print("{} + {} = {}".format(a, b, add(a,b)))
-if __name__ == "__main__":
-    main()
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. a + b
+    """
+    return a + b
+
+a = 1
+b = 2
+
+# Import the add function from add_0.py
+from add_0 import add
+
+# Calculate the sum
+result = add(a, b)
+
+# Print the result using string formatting
+print("{} + {} = {}".format(a, b, result))
