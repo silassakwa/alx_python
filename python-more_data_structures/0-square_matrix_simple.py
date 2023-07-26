@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
     new_matrix = []
@@ -8,6 +7,9 @@ def square_matrix_simple(matrix=[]):
             new_row.append(num ** 2)
         new_matrix.append(new_row)
     return new_matrix
+
+#!/usr/bin/python3
+square_matrix_simple = __import__('0-square_matrix_simple').square_matrix_simple
 
 matrix = [
     [1, 2, 3],
