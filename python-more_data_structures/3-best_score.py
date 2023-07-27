@@ -4,9 +4,9 @@ def best_score(a_dictionary):
 
     max_score = max(a_dictionary.values())
     best_keys = [key for key, score in a_dictionary.items() if score == max_score]
-    return best_keys, max_score
+    return best_keys[0]
 
 # Test case
-a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
-best_keys= best_score(a_dictionary)
-print("Best:",best_keys)
+my_dict = {'John': 12, 'Alex': 8, 'Bob': 14, 'Mike': 14, 'Molly': 16}
+best_key = best_score(my_dict)
+print("Best:", best_key)
