@@ -8,5 +8,5 @@ def best_score(a_dictionary):
 
 # Test case
 a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
-best_keys, best_value = best_score(a_dictionary)
-print(best_keys,":",best_value)
+best_keys= best_score(a_dictionary)
+print("Best:",best_keys)
