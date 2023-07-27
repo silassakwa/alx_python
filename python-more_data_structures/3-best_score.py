@@ -2,13 +2,11 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
 
-    best_key = max(a_dictionary, key=a_dictionary.get)
-    return best_key
+    max_score = max(a_dictionary.values())
+    best_keys = [key for key, score in a_dictionary.items() if score == max_score]
+    return best_keys, max_score
 
-# Test cases
-a_dictionary = {'John': 12, 'Bob': 30, 'Mike': 14, 'Molly': 16, 'Adam': 10}
-best_key = best_score(a_dictionary)
-print("Best score: {}".format(best_key))
-
-best_key = best_score(None)
-print("Best score: {}".format(best_key))
+# Test case
+a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+best_keys, best_value = best_score(a_dictionary)
+print(best_keys,":",best_value)
