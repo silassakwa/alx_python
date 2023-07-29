@@ -1,38 +1,47 @@
-#!/usr/bin/python3
-"""Define a class Square."""
-
-
 class Square:
-    """Represent a square."""
+    """
+    Represents a square with a private instance attribute 'size' that stores the side length of the square.
+
+    Attributes:
+        __size (int): The side length of the square.
+
+    Methods:
+        __init__(self, size=0):
+            Constructor method to initialize the Square object with the given size.
+    """
 
     def __init__(self, size=0):
-        """Initialize a new square.
+        """
+        Initializes a Square object with the given side length.
 
         Args:
-            size (int): The size of the new square.
-        """
-        self.size = size
+            size (int): The side length of the square. Default is 0.
 
-if __name__ == "__main__":
-    try:
-        my_square_1 = Square(-2)
-        if my_square_1.size < 0:
+        Raises:
+            TypeError: If 'size' is not an integer.
+            ValueError: If 'size' is less than 0.
+
+        Returns:
+            None
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
             raise ValueError("size must be >= 0")
-    except TypeError:
-        print("size must be an integer")
-    except ValueError as e:
-        print(e)
-    else:
-        print(my_square_1.size)
-        print(type(my_square_1))  # Output: <class '__main__.Square'>
-        print(my_square_1.__dict__)  # Output: {'size': 3}
+        self.__size = size
+
+# Test the Square class
+if __name__ == "__main__":
+    my_square_1 = Square(3)
+    print(type(my_square_1))  # Output: <class '__main__.Square'>
+    print(my_square_1.__dict__)  # Output: {'_Square__size': 3}
 
     my_square_2 = Square()
     print(type(my_square_2))  # Output: <class '__main__.Square'>
-    print(my_square_2.__dict__)  # Output: {'size': 0}
+    print(my_square_2.__dict__)  # Output: {'_Square__size': 0}
 
     try:
-        print(my_square_1.size)  # Output: 3
+        print(my_square_1.size)  # Output: 'Square' object has no attribute 'size'
     except AttributeError as e:
         print(e)
 
