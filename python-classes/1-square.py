@@ -23,6 +23,34 @@ if __name__ == "__main__":
     except ValueError as e:
         print(e)
     else:
-
         print(my_square_1.size)
+        print(type(my_square_1))  # Output: <class '__main__.Square'>
+        print(my_square_1.__dict__)  # Output: {'size': 3}
 
+    my_square_2 = Square()
+    print(type(my_square_2))  # Output: <class '__main__.Square'>
+    print(my_square_2.__dict__)  # Output: {'size': 0}
+
+    try:
+        print(my_square_1.size)  # Output: 3
+    except AttributeError as e:
+        print(e)
+
+    try:
+        print(my_square_1.__size)  # Output: 'Square' object has no attribute '__size'
+    except AttributeError as e:
+        print(e)
+
+    try:
+        my_square_3 = Square("3")
+        print(type(my_square_3))
+        print(my_square_3.__dict__)
+    except Exception as e:
+        print(e)  # Output: size must be an integer
+
+    try:
+        my_square_4 = Square(-89)
+        print(type(my_square_4))
+        print(my_square_4.__dict__)
+    except Exception as e:
+        print(e)  # Output: size must be >= 0
