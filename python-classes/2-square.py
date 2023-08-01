@@ -48,7 +48,7 @@ Functions:
 #Square = __import__('2-square').Square
 
 my_square_1 = Square(3)
-print("{}".format(my_square_1.area()))
+print("Area: {}".format(my_square_1.area()))
 
 # my_square_2 = Square(5)
 # print("Area: {}".format(my_square_2.area()))
