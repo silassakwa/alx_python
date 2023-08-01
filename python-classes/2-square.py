@@ -45,23 +45,10 @@ Functions:
 """
 
 # Importing the Square class from the module 2-square.py
-Square = __import__('2-square').Square
+#Square = __import__('2-square').Square
 
-
-# Create a Square object with size 3 and calculate its area
 my_square_1 = Square(3)
-# Accessing the 'size' attribute of the Square object and handling the exception if it does not exist
 print("Area: {}".format(my_square_1.area()))
 
-try:
-    print(my_square_1.size)
-except Exception as e:
-    print(e)
-
-try:
-    print(my_square_1.__size)
-except Exception as e:
-    print(e)
-# Create another Square object with size 5 and calculate its area
 my_square_2 = Square(5)
 print("Area: {}".format(my_square_2.area()))
