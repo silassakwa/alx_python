@@ -1,5 +1,19 @@
 class Square:
-    """class Square that defines a square"""
+    """
+    A class that defines a square.
+
+    Attributes:
+        __size (int): The size of the square.
+
+    Methods:
+        __init__(self, size=0): Constructor method for Square class.
+            Initializes a square object with the given size.
+        area(self): Calculates and returns the area of the square.
+
+    Raises:
+        TypeError: If the input size is not an integer.
+        ValueError: If the input size is less than 0.
+    """
 
     def __init__(self, size=0):
         """initialize square
