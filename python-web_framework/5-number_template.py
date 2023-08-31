@@ -2,7 +2,7 @@
 A simple Flask web application to display "Hello HBNB!", custom messages, Python messages, and number checking.
 """
 
-from flask import Flask
+from flask import Flask,render_template
 
 app = Flask(__name__)
 
@@ -58,7 +58,7 @@ def display_number(n):
     Returns:
         str: A message indicating if n is a number.
     """
-    return f"{n} is a number"
+    return    render_template("number_template.html", number=n)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)

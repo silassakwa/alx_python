@@ -58,7 +58,7 @@ def display_number(n):
     Returns:
         str: A message indicating if n is a number.
     """
-    return   return render_template("number_template.html", number=n)
+    return    render_template("number_template.html", number=n)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
