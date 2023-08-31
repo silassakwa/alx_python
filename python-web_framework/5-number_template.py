@@ -47,7 +47,7 @@ def display_python_text(text):
     formatted_text = text.replace("_", " ")
     return f"Python {formatted_text}"
 
-@app.route("/number/<int:n>", strict_slashes=False)
+@app.route("/number_template/<int:n>", strict_slashes=False)
 def display_number(n):
     """
     Display a message indicating if n is a number.
