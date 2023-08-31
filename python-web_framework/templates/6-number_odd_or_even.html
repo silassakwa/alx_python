@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HBNB</title>
+</head>
+<body>
+    {% if number is defined %}
+        <h1>Number: {{ number }}</h1>
+        {% if number % 2 == 0 %}
+            <p>This number is even.</p>
+        {% else %}
+            <p>This number is odd.</p>
+        {% endif %}
+    {% else %}
+        <p>Invalid input: Not a number</p>
+    {% endif %}
+</body>
+</html>

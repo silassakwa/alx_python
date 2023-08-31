@@ -47,7 +47,7 @@ def display_python_text(text):
     formatted_text = text.replace("_", " ")
     return f"Python {formatted_text}"
 
-@app.route("/number_template/<int:n>", strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def display_number(n):
     """
     Display a message indicating if n is a number.
@@ -58,10 +58,10 @@ def display_number(n):
     Returns:
         str: A message indicating if n is a number.
     """
-    if isinstance (n,int):
-        return  render_template("5-number.html",number=n)
+    if isinstance(int,n):
+        return render_template("6-number_odd_or_even.html")
     else:
-        return "not a number"
+        return render_template("6-number_odd_or_even.html")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='5000', debug=True)
