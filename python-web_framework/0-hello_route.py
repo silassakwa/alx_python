@@ -1,15 +1,20 @@
-#!/user/bin/python
 """
-flask web frame work to display hello HBNB!
+A simple Flask web application to display "Hello HBNB!".
 """
 
 from flask import Flask
 
-app=Flask(__name__)
+app = Flask(__name__)
 
-@app.route("/",strict_slashes=False)
+@app.route("/", strict_slashes=False)
 def home():
-    return  " Hello HBNB!"
+    """
+    The view function for the home page ("/") of the web application.
 
-if __name__=="__main__":
-    app.run(host='0.0.0.0',port='5000',debug=True)
+    Returns:
+        str: The greeting message "Hello HBNB!".
+    """
+    return "Hello HBNB!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port='5000', debug=True)
