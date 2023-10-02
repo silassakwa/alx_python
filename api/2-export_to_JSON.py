@@ -1,8 +1,17 @@
+import json
 import requests
 import sys
-import json
 
 def get_employee_data(employee_id):
+    """
+    Fetches employee data and their TODO list, then exports it to a JSON file.
+
+    Args:
+        employee_id (int): The ID of the employee for whom data is to be fetched and exported.
+
+    Returns:
+        None
+    """
     # Define the API URLs for employee details and their TODO list
     employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     todo_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
