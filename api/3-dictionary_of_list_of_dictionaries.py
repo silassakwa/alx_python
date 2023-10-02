@@ -46,6 +46,15 @@ def get_all_employee_data():
 
         print(f"Data exported to {json_file_name}")
 
+        # Output the data for all users found
+        for user_id, tasks in json_data.items():
+            print(f"User ID: {user_id}")
+            for task in tasks:
+                print(f"Username: {task['username']}")
+                print(f"Task: {task['task']}")
+                print(f"Completed: {task['completed']}")
+                print()
+
     else:
         print("Failed to retrieve data for all employees")
 
