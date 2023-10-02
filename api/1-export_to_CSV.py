@@ -1,6 +1,6 @@
+import csv
 import requests
 import sys
-import csv
 
 def get_employee_data(employee_id):
     # Define the API URLs for employee details and their TODO list
